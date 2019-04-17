@@ -117,6 +117,8 @@ open class SlideUpControllerDefaultView: UIViewController {
                 self.currentState = state
             case .current:
                 ()
+            @unknown default:
+                ()
             }
             
             // manually reset the constraint positions

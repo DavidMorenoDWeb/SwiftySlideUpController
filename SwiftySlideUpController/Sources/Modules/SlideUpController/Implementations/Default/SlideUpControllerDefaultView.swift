@@ -57,7 +57,7 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     // MARK: Life-Cycle
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         configOverlayView()
         configPopupView()
@@ -67,7 +67,11 @@ open class SlideUpControllerDefaultView: UIViewController {
     // MARK: Methods
     
     private func configPopupView() {
-        popupView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        if #available(iOS 11.0, *) {
+            popupView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        } else {
+            // Fallback on earlier versions
+        }
         popupView.layer.shadowColor = UIColor.black.cgColor
         popupView.layer.shadowOpacity = 0.1
         popupView.layer.shadowRadius = 10
@@ -137,7 +141,11 @@ open class SlideUpControllerDefaultView: UIViewController {
             //                self.closedTitleLabel.alpha = 1
             //            }
         })
-        inTitleAnimator.scrubsLinearly = false
+        if #available(iOS 11.0, *) {
+            inTitleAnimator.scrubsLinearly = false
+        } else {
+            // Fallback on earlier versions
+        }
         
         // an animator for the title that is transitioning out of view
         let outTitleAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeOut, animations: {
@@ -148,7 +156,11 @@ open class SlideUpControllerDefaultView: UIViewController {
             //                self.openTitleLabel.alpha = 0
             //            }
         })
-        outTitleAnimator.scrubsLinearly = false
+        if #available(iOS 11.0, *) {
+            outTitleAnimator.scrubsLinearly = false
+        } else {
+            // Fallback on earlier versions
+        }
         
         // start all animators
         transitionAnimator.startAnimation()

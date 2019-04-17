@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol SlideUpControllerView: UIViewController {
+public protocol SlideUpControllerView: UIViewController {
     
     // MARK: Properties
     

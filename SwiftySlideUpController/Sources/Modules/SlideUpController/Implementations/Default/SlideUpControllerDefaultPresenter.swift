@@ -12,7 +12,7 @@ open class SlideUpControllerDefaultPresenter {
     
     // MARK: Properties
     
-    weak var view: SlideUpControllerView?
+    weak public var view: SlideUpControllerView?
     
     // MARK: Methods
     
@@ -26,7 +26,7 @@ open class SlideUpControllerDefaultPresenter {
 
 extension SlideUpControllerDefaultPresenter: SlideUpControllerPresenter {
     
-    func present(in vc: UIViewController) {
+    public func present(in vc: UIViewController) {
         addSlideUpControllerView(to: vc)
     }
 }

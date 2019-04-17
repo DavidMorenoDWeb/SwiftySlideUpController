@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SlideUpControllerPresenter: class {
+public protocol SlideUpControllerPresenter: class {
     
     // MARK: Properties
     

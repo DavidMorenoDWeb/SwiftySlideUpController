@@ -6,8 +6,8 @@
 //  Copyright © 2019 David Moreno Lora. All rights reserved.
 //
 
+import Foundation
 import UIKit
-
 import UIKit.UIGestureRecognizerSubclass
 
 private enum State {
@@ -26,14 +26,16 @@ extension State {
 
 open class SlideUpControllerDefaultView: UIViewController {
 
-    var presenter: SlideUpControllerPresenter?
+    public var presenter: SlideUpControllerPresenter?
     
     // MARK: Outlets
     
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var overlayView: UIView!
-    
+    @IBOutlet weak var closeTitleLabel: UILabel!
+    @IBOutlet weak var openTitleLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     // MARK: - Constants
     
     private let popupOffset: CGFloat = 440
@@ -55,12 +57,24 @@ open class SlideUpControllerDefaultView: UIViewController {
     /// The progress of each animator. This array is parallel to the `runningAnimators` array.
     private var animationProgress = [CGFloat]()
     
+    // MARK: Initializers
+    
+    public init(){
+        let bundle = Bundle(for: type(of: self))
+        super.init(nibName: nil, bundle: bundle)
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     // MARK: Life-Cycle
     
     override open func viewDidLoad() {
         super.viewDidLoad()
         configOverlayView()
         configPopupView()
+        configOpenTitleLabel()
         popupView.addGestureRecognizer(panRecognizer)
     }
     
@@ -81,6 +95,11 @@ open class SlideUpControllerDefaultView: UIViewController {
         overlayView.alpha = 0.0
     }
     
+    private func configOpenTitleLabel() {
+        openTitleLabel.alpha = 0
+        openTitleLabel.transform = CGAffineTransform(scaleX: 0.65, y: 0.65).concatenating(CGAffineTransform(translationX: 0, y: -15))
+    }
+    
     /// Animates the transition, if the animation is not already running.
     private func animateTransitionIfNeeded(to state: State, duration: TimeInterval) {
         
@@ -94,14 +113,14 @@ open class SlideUpControllerDefaultView: UIViewController {
                 self.bottomConstraint.constant = 0
                 self.popupView.layer.cornerRadius = 20
                 self.overlayView.alpha = 0.5
-                //                self.closedTitleLabel.transform = CGAffineTransform(scaleX: 1.6, y: 1.6).concatenating(CGAffineTransform(translationX: 0, y: 15))
-            //                self.openTitleLabel.transform = .identity
+                                self.closeTitleLabel.transform = CGAffineTransform(scaleX: 1.6, y: 1.6).concatenating(CGAffineTransform(translationX: 0, y: 15))
+                            self.openTitleLabel.transform = .identity
             case .closed:
                 self.bottomConstraint.constant = self.popupOffset
                 self.popupView.layer.cornerRadius = 0
                 self.overlayView.alpha = 0
-                //                self.closedTitleLabel.transform = .identity
-                //                self.openTitleLabel.transform = CGAffineTransform(scaleX: 0.65, y: 0.65).concatenating(CGAffineTransform(translationX: 0, y: -15))
+                                self.closeTitleLabel.transform = .identity
+                                self.openTitleLabel.transform = CGAffineTransform(scaleX: 0.65, y: 0.65).concatenating(CGAffineTransform(translationX: 0, y: -15))
             }
             self.view.layoutIfNeeded()
         })
@@ -136,12 +155,12 @@ open class SlideUpControllerDefaultView: UIViewController {
         
         // an animator for the title that is transitioning into view
         let inTitleAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeIn, animations: {
-            //            switch state {
-            //            case .open:
-            //                self.openTitleLabel.alpha = 1
-            //            case .closed:
-            //                self.closedTitleLabel.alpha = 1
-            //            }
+                        switch state {
+                        case .open:
+                            self.openTitleLabel.alpha = 1
+                        case .closed:
+                            self.closeTitleLabel.alpha = 1
+                        }
         })
         if #available(iOS 11.0, *) {
             inTitleAnimator.scrubsLinearly = false
@@ -151,12 +170,12 @@ open class SlideUpControllerDefaultView: UIViewController {
         
         // an animator for the title that is transitioning out of view
         let outTitleAnimator = UIViewPropertyAnimator(duration: duration, curve: .easeOut, animations: {
-            //            switch state {
-            //            case .open:
-            //                self.closedTitleLabel.alpha = 0
-            //            case .closed:
-            //                self.openTitleLabel.alpha = 0
-            //            }
+                        switch state {
+                        case .open:
+                            self.closeTitleLabel.alpha = 0
+                        case .closed:
+                            self.openTitleLabel.alpha = 0
+                        }
         })
         if #available(iOS 11.0, *) {
             outTitleAnimator.scrubsLinearly = false
@@ -239,7 +258,7 @@ open class SlideUpControllerDefaultView: UIViewController {
 
 extension SlideUpControllerDefaultView: SlideUpControllerView {
     
-    func present(in vc: UIViewController) {
+    public func present(in vc: UIViewController) {
         self.presenter?.present(in: vc)
     }
 }

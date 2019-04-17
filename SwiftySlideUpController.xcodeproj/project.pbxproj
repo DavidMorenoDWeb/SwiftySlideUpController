@@ -11,8 +11,6 @@
 		AAD15D3322661C1D00B36F8A /* SwiftySlideUpControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D3222661C1D00B36F8A /* SwiftySlideUpControllerTests.swift */; };
 		AAD15D3522661C1D00B36F8A /* SwiftySlideUpController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD15D2722661C1D00B36F8A /* SwiftySlideUpController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAD15D4522661C9A00B36F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D4422661C9A00B36F8A /* AppDelegate.swift */; };
-		AAD15D4722661C9A00B36F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D4622661C9A00B36F8A /* ViewController.swift */; };
-		AAD15D4A22661C9A00B36F8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D4822661C9A00B36F8A /* Main.storyboard */; };
 		AAD15D4C22661C9B00B36F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D4B22661C9B00B36F8A /* Assets.xcassets */; };
 		AAD15D4F22661C9B00B36F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D4D22661C9B00B36F8A /* LaunchScreen.storyboard */; };
 		AAD15D5D2266249100B36F8A /* SlideUpControllerDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D5B2266249100B36F8A /* SlideUpControllerDefaultView.swift */; };
@@ -22,6 +20,22 @@
 		AAD15D662266258C00B36F8A /* SlideUpControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D652266258C00B36F8A /* SlideUpControllerModule.swift */; };
 		AAD15D682266260200B36F8A /* SlideUpControllerDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D672266260200B36F8A /* SlideUpControllerDefaultPresenter.swift */; };
 		AAD15D6C2266291800B36F8A /* InstantPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */; };
+		AAD15D8122671BE000B36F8A /* MainDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7722671BE000B36F8A /* MainDefaultRouter.swift */; };
+		AAD15D8222671BE000B36F8A /* MainDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7822671BE000B36F8A /* MainDefaultView.swift */; };
+		AAD15D8322671BE000B36F8A /* MainDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7922671BE000B36F8A /* MainDefaultInteractor.swift */; };
+		AAD15D8422671BE000B36F8A /* MainDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7A22671BE000B36F8A /* MainDefaultPresenter.swift */; };
+		AAD15D8522671BE000B36F8A /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7B22671BE000B36F8A /* MainModule.swift */; };
+		AAD15D8622671BE000B36F8A /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7D22671BE000B36F8A /* MainInteractor.swift */; };
+		AAD15D8722671BE000B36F8A /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7E22671BE000B36F8A /* MainPresenter.swift */; };
+		AAD15D8822671BE000B36F8A /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7F22671BE000B36F8A /* MainRouter.swift */; };
+		AAD15D8922671BE000B36F8A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D8022671BE000B36F8A /* MainView.swift */; };
+		AAD15D8B22671C0500B36F8A /* MainDefaultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D8A22671C0500B36F8A /* MainDefaultView.xib */; };
+		AAD15D9022673A5200B36F8A /* SlideUpControllerTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D8F22673A5200B36F8A /* SlideUpControllerTitle.swift */; };
+		AAD15D9322673D6F00B36F8A /* SlideUpControllerItemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D9222673D6F00B36F8A /* SlideUpControllerItemData.swift */; };
+		AAD15D9522673F3200B36F8A /* SlideUpControllerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D9422673F3200B36F8A /* SlideUpControllerItem.swift */; };
+		AAD15D9A2267427F00B36F8A /* SlideUpDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D982267427F00B36F8A /* SlideUpDefaultTableViewCell.swift */; };
+		AAD15D9B2267427F00B36F8A /* SlideUpDefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D992267427F00B36F8A /* SlideUpDefaultTableViewCell.xib */; };
+		AAD15D9E226755BD00B36F8A /* SlideUpDefaultItemHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D9D226755BD00B36F8A /* SlideUpDefaultItemHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +57,6 @@
 		AAD15D3422661C1D00B36F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD15D4222661C9900B36F8A /* SwiftySlideUpControllerExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySlideUpControllerExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD15D4422661C9A00B36F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAD15D4622661C9A00B36F8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AAD15D4922661C9A00B36F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAD15D4B22661C9B00B36F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD15D4E22661C9B00B36F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD15D5022661C9B00B36F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +67,22 @@
 		AAD15D652266258C00B36F8A /* SlideUpControllerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerModule.swift; sourceTree = "<group>"; };
 		AAD15D672266260200B36F8A /* SlideUpControllerDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerDefaultPresenter.swift; sourceTree = "<group>"; };
 		AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		AAD15D7722671BE000B36F8A /* MainDefaultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDefaultRouter.swift; sourceTree = "<group>"; };
+		AAD15D7822671BE000B36F8A /* MainDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDefaultView.swift; sourceTree = "<group>"; };
+		AAD15D7922671BE000B36F8A /* MainDefaultInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDefaultInteractor.swift; sourceTree = "<group>"; };
+		AAD15D7A22671BE000B36F8A /* MainDefaultPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDefaultPresenter.swift; sourceTree = "<group>"; };
+		AAD15D7B22671BE000B36F8A /* MainModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		AAD15D7D22671BE000B36F8A /* MainInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		AAD15D7E22671BE000B36F8A /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		AAD15D7F22671BE000B36F8A /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		AAD15D8022671BE000B36F8A /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AAD15D8A22671C0500B36F8A /* MainDefaultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainDefaultView.xib; sourceTree = "<group>"; };
+		AAD15D8F22673A5200B36F8A /* SlideUpControllerTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerTitle.swift; sourceTree = "<group>"; };
+		AAD15D9222673D6F00B36F8A /* SlideUpControllerItemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerItemData.swift; sourceTree = "<group>"; };
+		AAD15D9422673F3200B36F8A /* SlideUpControllerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerItem.swift; sourceTree = "<group>"; };
+		AAD15D982267427F00B36F8A /* SlideUpDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpDefaultTableViewCell.swift; sourceTree = "<group>"; };
+		AAD15D992267427F00B36F8A /* SlideUpDefaultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideUpDefaultTableViewCell.xib; sourceTree = "<group>"; };
+		AAD15D9D226755BD00B36F8A /* SlideUpDefaultItemHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpDefaultItemHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +153,8 @@
 		AAD15D4322661C9900B36F8A /* SwiftySlideUpControllerExamples */ = {
 			isa = PBXGroup;
 			children = (
-				AAD15D4422661C9A00B36F8A /* AppDelegate.swift */,
-				AAD15D4622661C9A00B36F8A /* ViewController.swift */,
-				AAD15D4822661C9A00B36F8A /* Main.storyboard */,
-				AAD15D4B22661C9B00B36F8A /* Assets.xcassets */,
-				AAD15D4D22661C9B00B36F8A /* LaunchScreen.storyboard */,
-				AAD15D5022661C9B00B36F8A /* Info.plist */,
+				AAD15D6F22671AAE00B36F8A /* Assets */,
+				AAD15D7022671AB600B36F8A /* Sources */,
 			);
 			path = SwiftySlideUpControllerExamples;
 			sourceTree = "<group>";
@@ -140,6 +164,7 @@
 			children = (
 				AAD15D69226628ED00B36F8A /* App */,
 				AAD15D55226623EE00B36F8A /* Modules */,
+				AAD15D8D226739DA00B36F8A /* Services */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -192,6 +217,7 @@
 		AAD15D69226628ED00B36F8A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				AAD15D962267421400B36F8A /* Views */,
 				AAD15D6A226628F200B36F8A /* GestureRecognizers */,
 			);
 			path = App;
@@ -203,6 +229,134 @@
 				AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */,
 			);
 			path = GestureRecognizers;
+			sourceTree = "<group>";
+		};
+		AAD15D6F22671AAE00B36F8A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D4B22661C9B00B36F8A /* Assets.xcassets */,
+				AAD15D5022661C9B00B36F8A /* Info.plist */,
+				AAD15D4D22661C9B00B36F8A /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AAD15D7022671AB600B36F8A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D7122671AC300B36F8A /* App */,
+				AAD15D7222671ACB00B36F8A /* Modules */,
+				AAD15D7322671AD400B36F8A /* Services */,
+				AAD15D4422661C9A00B36F8A /* AppDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AAD15D7122671AC300B36F8A /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AAD15D7222671ACB00B36F8A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D7422671BE000B36F8A /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AAD15D7322671AD400B36F8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AAD15D7422671BE000B36F8A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D7522671BE000B36F8A /* Implementations */,
+				AAD15D7B22671BE000B36F8A /* MainModule.swift */,
+				AAD15D7C22671BE000B36F8A /* Interfaces */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AAD15D7522671BE000B36F8A /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D7622671BE000B36F8A /* Default */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		AAD15D7622671BE000B36F8A /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D7722671BE000B36F8A /* MainDefaultRouter.swift */,
+				AAD15D7822671BE000B36F8A /* MainDefaultView.swift */,
+				AAD15D7922671BE000B36F8A /* MainDefaultInteractor.swift */,
+				AAD15D7A22671BE000B36F8A /* MainDefaultPresenter.swift */,
+				AAD15D8A22671C0500B36F8A /* MainDefaultView.xib */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		AAD15D7C22671BE000B36F8A /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D7D22671BE000B36F8A /* MainInteractor.swift */,
+				AAD15D7E22671BE000B36F8A /* MainPresenter.swift */,
+				AAD15D7F22671BE000B36F8A /* MainRouter.swift */,
+				AAD15D8022671BE000B36F8A /* MainView.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		AAD15D8D226739DA00B36F8A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D8E22673A3E00B36F8A /* Entities */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AAD15D8E22673A3E00B36F8A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D8F22673A5200B36F8A /* SlideUpControllerTitle.swift */,
+				AAD15D9222673D6F00B36F8A /* SlideUpControllerItemData.swift */,
+				AAD15D9422673F3200B36F8A /* SlideUpControllerItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AAD15D962267421400B36F8A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D9C2267556500B36F8A /* TableViewHandlers */,
+				AAD15D972267421B00B36F8A /* TableViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AAD15D972267421B00B36F8A /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D982267427F00B36F8A /* SlideUpDefaultTableViewCell.swift */,
+				AAD15D992267427F00B36F8A /* SlideUpDefaultTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		AAD15D9C2267556500B36F8A /* TableViewHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D9D226755BD00B36F8A /* SlideUpDefaultItemHandler.swift */,
+			);
+			path = TableViewHandlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +473,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD15D9B2267427F00B36F8A /* SlideUpDefaultTableViewCell.xib in Resources */,
 				AAD15D5E2266249100B36F8A /* SlideUpControllerDefaultView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,8 +490,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD15D4F22661C9B00B36F8A /* LaunchScreen.storyboard in Resources */,
+				AAD15D8B22671C0500B36F8A /* MainDefaultView.xib in Resources */,
 				AAD15D4C22661C9B00B36F8A /* Assets.xcassets in Resources */,
-				AAD15D4A22661C9A00B36F8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,12 +502,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD15D9E226755BD00B36F8A /* SlideUpDefaultItemHandler.swift in Sources */,
 				AAD15D662266258C00B36F8A /* SlideUpControllerModule.swift in Sources */,
 				AAD15D5D2266249100B36F8A /* SlideUpControllerDefaultView.swift in Sources */,
+				AAD15D9A2267427F00B36F8A /* SlideUpDefaultTableViewCell.swift in Sources */,
 				AAD15D642266251B00B36F8A /* SlideUpControllerPresenter.swift in Sources */,
 				AAD15D62226624E300B36F8A /* SlideUpControllerView.swift in Sources */,
 				AAD15D682266260200B36F8A /* SlideUpControllerDefaultPresenter.swift in Sources */,
+				AAD15D9322673D6F00B36F8A /* SlideUpControllerItemData.swift in Sources */,
 				AAD15D6C2266291800B36F8A /* InstantPanGestureRecognizer.swift in Sources */,
+				AAD15D9022673A5200B36F8A /* SlideUpControllerTitle.swift in Sources */,
+				AAD15D9522673F3200B36F8A /* SlideUpControllerItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +528,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD15D4722661C9A00B36F8A /* ViewController.swift in Sources */,
 				AAD15D4522661C9A00B36F8A /* AppDelegate.swift in Sources */,
+				AAD15D8222671BE000B36F8A /* MainDefaultView.swift in Sources */,
+				AAD15D8122671BE000B36F8A /* MainDefaultRouter.swift in Sources */,
+				AAD15D8922671BE000B36F8A /* MainView.swift in Sources */,
+				AAD15D8722671BE000B36F8A /* MainPresenter.swift in Sources */,
+				AAD15D8422671BE000B36F8A /* MainDefaultPresenter.swift in Sources */,
+				AAD15D8522671BE000B36F8A /* MainModule.swift in Sources */,
+				AAD15D8622671BE000B36F8A /* MainInteractor.swift in Sources */,
+				AAD15D8322671BE000B36F8A /* MainDefaultInteractor.swift in Sources */,
+				AAD15D8822671BE000B36F8A /* MainRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,14 +552,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AAD15D4822661C9A00B36F8A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AAD15D4922661C9A00B36F8A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AAD15D4D22661C9B00B36F8A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -619,7 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftySlideUpControllerExamples/Info.plist;
+				INFOPLIST_FILE = SwiftySlideUpControllerExamples/Assets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,7 +797,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SwiftySlideUpControllerExamples/Info.plist;
+				INFOPLIST_FILE = SwiftySlideUpControllerExamples/Assets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

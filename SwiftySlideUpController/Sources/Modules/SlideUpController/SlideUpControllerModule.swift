@@ -7,11 +7,19 @@
 //
 
 import Foundation
-import UIKit
 
 open class SlideUpControllerModule {
     
-    func buildDefault() -> UIViewController {
+    // MARK: Initializers
+    
+    public init () {}
+    
+    // MARK: Build methods
+    
+    /// Creates SlideUpControllerDefaultView and links it with a presenter
+    ///
+    /// - Returns: a SlideUpControllerDefaultView
+    public func buildDefault() -> SlideUpControllerDefaultView {
         let view = SlideUpControllerDefaultView()
         let presenter = SlideUpControllerDefaultPresenter()
         

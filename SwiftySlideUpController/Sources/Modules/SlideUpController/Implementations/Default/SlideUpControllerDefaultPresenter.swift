@@ -7,3 +7,26 @@
 //
 
 import Foundation
+
+open class SlideUpControllerDefaultPresenter {
+    
+    // MARK: Properties
+    
+    weak var view: SlideUpControllerView?
+    
+    // MARK: Methods
+    
+    func addSlideUpControllerView(to vc: UIViewController) {
+        if let slideUpView = view?.view {
+            slideUpView.frame = vc.view?.bounds ?? .zero
+            vc.view?.addSubview(slideUpView)
+        }
+    }
+}
+
+extension SlideUpControllerDefaultPresenter: SlideUpControllerPresenter {
+    
+    func present(in vc: UIViewController) {
+        addSlideUpControllerView(to: vc)
+    }
+}

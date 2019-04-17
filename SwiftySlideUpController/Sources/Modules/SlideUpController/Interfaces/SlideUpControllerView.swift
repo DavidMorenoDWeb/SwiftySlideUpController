@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+protocol SlideUpControllerView: UIViewController {
+    
+    // MARK: Properties
+    
+    var presenter: SlideUpControllerPresenter? { get set }
+    
+    // MARK: Methods
+    
+    func present(in vc: UIViewController)
+    
+}

@@ -10,6 +10,18 @@
 		AAD15D2E22661C1D00B36F8A /* SwiftySlideUpController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD15D2422661C1D00B36F8A /* SwiftySlideUpController.framework */; };
 		AAD15D3322661C1D00B36F8A /* SwiftySlideUpControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D3222661C1D00B36F8A /* SwiftySlideUpControllerTests.swift */; };
 		AAD15D3522661C1D00B36F8A /* SwiftySlideUpController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD15D2722661C1D00B36F8A /* SwiftySlideUpController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAD15D4522661C9A00B36F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D4422661C9A00B36F8A /* AppDelegate.swift */; };
+		AAD15D4722661C9A00B36F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D4622661C9A00B36F8A /* ViewController.swift */; };
+		AAD15D4A22661C9A00B36F8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D4822661C9A00B36F8A /* Main.storyboard */; };
+		AAD15D4C22661C9B00B36F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D4B22661C9B00B36F8A /* Assets.xcassets */; };
+		AAD15D4F22661C9B00B36F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D4D22661C9B00B36F8A /* LaunchScreen.storyboard */; };
+		AAD15D5D2266249100B36F8A /* SlideUpControllerDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D5B2266249100B36F8A /* SlideUpControllerDefaultView.swift */; };
+		AAD15D5E2266249100B36F8A /* SlideUpControllerDefaultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D5C2266249100B36F8A /* SlideUpControllerDefaultView.xib */; };
+		AAD15D62226624E300B36F8A /* SlideUpControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D61226624E300B36F8A /* SlideUpControllerView.swift */; };
+		AAD15D642266251B00B36F8A /* SlideUpControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D632266251B00B36F8A /* SlideUpControllerPresenter.swift */; };
+		AAD15D662266258C00B36F8A /* SlideUpControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D652266258C00B36F8A /* SlideUpControllerModule.swift */; };
+		AAD15D682266260200B36F8A /* SlideUpControllerDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D672266260200B36F8A /* SlideUpControllerDefaultPresenter.swift */; };
+		AAD15D6C2266291800B36F8A /* InstantPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +41,20 @@
 		AAD15D2D22661C1D00B36F8A /* SwiftySlideUpControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySlideUpControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD15D3222661C1D00B36F8A /* SwiftySlideUpControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySlideUpControllerTests.swift; sourceTree = "<group>"; };
 		AAD15D3422661C1D00B36F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD15D4222661C9900B36F8A /* SwiftySlideUpControllerExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySlideUpControllerExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAD15D4422661C9A00B36F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAD15D4622661C9A00B36F8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAD15D4922661C9A00B36F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAD15D4B22661C9B00B36F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAD15D4E22661C9B00B36F8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAD15D5022661C9B00B36F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD15D5B2266249100B36F8A /* SlideUpControllerDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerDefaultView.swift; sourceTree = "<group>"; };
+		AAD15D5C2266249100B36F8A /* SlideUpControllerDefaultView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideUpControllerDefaultView.xib; sourceTree = "<group>"; };
+		AAD15D61226624E300B36F8A /* SlideUpControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerView.swift; sourceTree = "<group>"; };
+		AAD15D632266251B00B36F8A /* SlideUpControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerPresenter.swift; sourceTree = "<group>"; };
+		AAD15D652266258C00B36F8A /* SlideUpControllerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerModule.swift; sourceTree = "<group>"; };
+		AAD15D672266260200B36F8A /* SlideUpControllerDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerDefaultPresenter.swift; sourceTree = "<group>"; };
+		AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantPanGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +73,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AAD15D3F22661C9900B36F8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +88,7 @@
 			children = (
 				AAD15D2622661C1D00B36F8A /* SwiftySlideUpController */,
 				AAD15D3122661C1D00B36F8A /* SwiftySlideUpControllerTests */,
+				AAD15D4322661C9900B36F8A /* SwiftySlideUpControllerExamples */,
 				AAD15D2522661C1D00B36F8A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +98,7 @@
 			children = (
 				AAD15D2422661C1D00B36F8A /* SwiftySlideUpController.framework */,
 				AAD15D2D22661C1D00B36F8A /* SwiftySlideUpControllerTests.xctest */,
+				AAD15D4222661C9900B36F8A /* SwiftySlideUpControllerExamples.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +106,7 @@
 		AAD15D2622661C1D00B36F8A /* SwiftySlideUpController */ = {
 			isa = PBXGroup;
 			children = (
+				AAD15D54226623D400B36F8A /* Sources */,
 				AAD15D2722661C1D00B36F8A /* SwiftySlideUpController.h */,
 				AAD15D2822661C1D00B36F8A /* Info.plist */,
 			);
@@ -84,6 +120,89 @@
 				AAD15D3422661C1D00B36F8A /* Info.plist */,
 			);
 			path = SwiftySlideUpControllerTests;
+			sourceTree = "<group>";
+		};
+		AAD15D4322661C9900B36F8A /* SwiftySlideUpControllerExamples */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D4422661C9A00B36F8A /* AppDelegate.swift */,
+				AAD15D4622661C9A00B36F8A /* ViewController.swift */,
+				AAD15D4822661C9A00B36F8A /* Main.storyboard */,
+				AAD15D4B22661C9B00B36F8A /* Assets.xcassets */,
+				AAD15D4D22661C9B00B36F8A /* LaunchScreen.storyboard */,
+				AAD15D5022661C9B00B36F8A /* Info.plist */,
+			);
+			path = SwiftySlideUpControllerExamples;
+			sourceTree = "<group>";
+		};
+		AAD15D54226623D400B36F8A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D69226628ED00B36F8A /* App */,
+				AAD15D55226623EE00B36F8A /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AAD15D55226623EE00B36F8A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D56226623F900B36F8A /* SlideUpController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AAD15D56226623F900B36F8A /* SlideUpController */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D582266241F00B36F8A /* Implementations */,
+				AAD15D572266241700B36F8A /* Interfaces */,
+				AAD15D652266258C00B36F8A /* SlideUpControllerModule.swift */,
+			);
+			path = SlideUpController;
+			sourceTree = "<group>";
+		};
+		AAD15D572266241700B36F8A /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D632266251B00B36F8A /* SlideUpControllerPresenter.swift */,
+				AAD15D61226624E300B36F8A /* SlideUpControllerView.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		AAD15D582266241F00B36F8A /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D592266242700B36F8A /* Default */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		AAD15D592266242700B36F8A /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D672266260200B36F8A /* SlideUpControllerDefaultPresenter.swift */,
+				AAD15D5B2266249100B36F8A /* SlideUpControllerDefaultView.swift */,
+				AAD15D5C2266249100B36F8A /* SlideUpControllerDefaultView.xib */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		AAD15D69226628ED00B36F8A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D6A226628F200B36F8A /* GestureRecognizers */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AAD15D6A226628F200B36F8A /* GestureRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */,
+			);
+			path = GestureRecognizers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +255,23 @@
 			productReference = AAD15D2D22661C1D00B36F8A /* SwiftySlideUpControllerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AAD15D4122661C9900B36F8A /* SwiftySlideUpControllerExamples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAD15D5122661C9B00B36F8A /* Build configuration list for PBXNativeTarget "SwiftySlideUpControllerExamples" */;
+			buildPhases = (
+				AAD15D3E22661C9900B36F8A /* Sources */,
+				AAD15D3F22661C9900B36F8A /* Frameworks */,
+				AAD15D4022661C9900B36F8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftySlideUpControllerExamples;
+			productName = SwiftySlideUpControllerExamples;
+			productReference = AAD15D4222661C9900B36F8A /* SwiftySlideUpControllerExamples.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,8 +284,12 @@
 				TargetAttributes = {
 					AAD15D2322661C1D00B36F8A = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					AAD15D2C22661C1D00B36F8A = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					AAD15D4122661C9900B36F8A = {
 						CreatedOnToolsVersion = 10.2;
 					};
 				};
@@ -160,6 +300,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = AAD15D1A22661C1D00B36F8A;
 			productRefGroup = AAD15D2522661C1D00B36F8A /* Products */;
@@ -168,6 +309,7 @@
 			targets = (
 				AAD15D2322661C1D00B36F8A /* SwiftySlideUpController */,
 				AAD15D2C22661C1D00B36F8A /* SwiftySlideUpControllerTests */,
+				AAD15D4122661C9900B36F8A /* SwiftySlideUpControllerExamples */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD15D5E2266249100B36F8A /* SlideUpControllerDefaultView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +330,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AAD15D4022661C9900B36F8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD15D4F22661C9B00B36F8A /* LaunchScreen.storyboard in Resources */,
+				AAD15D4C22661C9B00B36F8A /* Assets.xcassets in Resources */,
+				AAD15D4A22661C9A00B36F8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +347,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD15D662266258C00B36F8A /* SlideUpControllerModule.swift in Sources */,
+				AAD15D5D2266249100B36F8A /* SlideUpControllerDefaultView.swift in Sources */,
+				AAD15D642266251B00B36F8A /* SlideUpControllerPresenter.swift in Sources */,
+				AAD15D62226624E300B36F8A /* SlideUpControllerView.swift in Sources */,
+				AAD15D682266260200B36F8A /* SlideUpControllerDefaultPresenter.swift in Sources */,
+				AAD15D6C2266291800B36F8A /* InstantPanGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +361,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD15D3322661C1D00B36F8A /* SwiftySlideUpControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAD15D3E22661C9900B36F8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD15D4722661C9A00B36F8A /* ViewController.swift in Sources */,
+				AAD15D4522661C9A00B36F8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +382,25 @@
 			targetProxy = AAD15D2F22661C1D00B36F8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AAD15D4822661C9A00B36F8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAD15D4922661C9A00B36F8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAD15D4D22661C9B00B36F8A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAD15D4E22661C9B00B36F8A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AAD15D3622661C1D00B36F8A /* Debug */ = {
@@ -341,6 +528,7 @@
 		AAD15D3922661C1D00B36F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidmorenolora.SwiftySlideUpController;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +554,7 @@
 		AAD15D3A22661C1D00B36F8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +579,7 @@
 		AAD15D3C22661C1D00B36F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftySlideUpControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +597,7 @@
 		AAD15D3D22661C1D00B36F8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftySlideUpControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,6 +606,40 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidmorenolora.SwiftySlideUpControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAD15D5222661C9B00B36F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftySlideUpControllerExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidmorenolora.SwiftySlideUpControllerExamples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAD15D5322661C9B00B36F8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftySlideUpControllerExamples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.davidmorenolora.SwiftySlideUpControllerExamples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,6 +672,15 @@
 			buildConfigurations = (
 				AAD15D3C22661C1D00B36F8A /* Debug */,
 				AAD15D3D22661C1D00B36F8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAD15D5122661C9B00B36F8A /* Build configuration list for PBXNativeTarget "SwiftySlideUpControllerExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAD15D5222661C9B00B36F8A /* Debug */,
+				AAD15D5322661C9B00B36F8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

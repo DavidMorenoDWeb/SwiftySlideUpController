@@ -17,6 +17,7 @@ public protocol SlideUpControllerView: UIViewController {
     
     // MARK: Methods
     
+    func addItem(_ item:SlideUpControllerItem<Any>)
     func present(in vc: UIViewController)
     
 }

@@ -13,6 +13,7 @@ open class SlideUpControllerDefaultPresenter {
     // MARK: Properties
     
     weak public var view: SlideUpControllerView?
+    public var items: [SlideUpControllerItem<Any>] = []
     
     // MARK: Methods
     
@@ -25,6 +26,10 @@ open class SlideUpControllerDefaultPresenter {
 }
 
 extension SlideUpControllerDefaultPresenter: SlideUpControllerPresenter {
+    
+    public func addItem(_ item: SlideUpControllerItem<Any>) {
+        items.append(item)
+    }
     
     public func present(in vc: UIViewController) {
         addSlideUpControllerView(to: vc)

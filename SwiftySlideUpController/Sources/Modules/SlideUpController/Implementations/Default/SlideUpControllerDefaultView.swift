@@ -48,6 +48,9 @@ open class SlideUpControllerDefaultView: UIViewController {
         return recognizer
     }()
     
+    /// The handler for the tableview items. It implements UITableViewDataSource and UITableViewDelegate
+    public var itemHandler: SlideUpDefaultItemHandler?
+    
     /// The current state of the animation. This variable is changed only when an animation completes.
     private var currentState: State = .closed
     
@@ -76,6 +79,7 @@ open class SlideUpControllerDefaultView: UIViewController {
         configPopupView()
         configOpenTitleLabel()
         popupView.addGestureRecognizer(panRecognizer)
+        itemHandler = SlideUpDefaultItemHandler(slideUpController: self)
     }
     
     // MARK: Methods
@@ -257,6 +261,11 @@ open class SlideUpControllerDefaultView: UIViewController {
 }
 
 extension SlideUpControllerDefaultView: SlideUpControllerView {
+    
+    public func addItem(_ item: SlideUpControllerItem<Any>) {
+        presenter?.addItem(item)
+        tableView.reloadData()
+    }
     
     public func present(in vc: UIViewController) {
         self.presenter?.present(in: vc)

@@ -13,9 +13,10 @@ public protocol SlideUpControllerPresenter: class {
     // MARK: Properties
     
     var view: SlideUpControllerView? { get set }
+    var items: [SlideUpControllerItem<Any>] { get set }
     
     // MARK: Methods
     
+    func addItem(_ item:SlideUpControllerItem<Any>)
     func present(in vc: UIViewController)
-    
 }

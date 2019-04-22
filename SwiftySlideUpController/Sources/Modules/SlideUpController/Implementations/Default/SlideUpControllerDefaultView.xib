@@ -60,7 +60,7 @@
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZC-Vv-1bC">
-                            <rect key="frame" x="0.0" y="186" width="375" height="314"/>
+                            <rect key="frame" x="0.0" y="80" width="375" height="420"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
@@ -68,7 +68,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="yZC-Vv-1bC" secondAttribute="trailing" id="8pI-xA-S59"/>
                         <constraint firstItem="UKa-v5-MTv" firstAttribute="top" secondItem="DYf-ZJ-u6k" secondAttribute="top" id="H5D-L9-QAL"/>
-                        <constraint firstItem="yZC-Vv-1bC" firstAttribute="top" secondItem="UKa-v5-MTv" secondAttribute="bottom" constant="126" id="OpS-Yz-NRZ"/>
+                        <constraint firstItem="yZC-Vv-1bC" firstAttribute="top" secondItem="UKa-v5-MTv" secondAttribute="bottom" constant="20" id="OpS-Yz-NRZ"/>
                         <constraint firstAttribute="trailing" secondItem="UKa-v5-MTv" secondAttribute="trailing" id="PrC-mc-rwt"/>
                         <constraint firstItem="yZC-Vv-1bC" firstAttribute="leading" secondItem="DYf-ZJ-u6k" secondAttribute="leading" id="VVL-Vy-xUc"/>
                         <constraint firstAttribute="bottom" secondItem="yZC-Vv-1bC" secondAttribute="bottom" id="cGp-rC-jNo"/>

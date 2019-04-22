@@ -18,6 +18,17 @@ open class SlideUpDefaultItemHandler: NSObject {
     
     public init(slideUpController: SlideUpControllerDefaultView) {
         self.slideUpController = slideUpController
+        super.init()
+        setupTableView()
+    }
+    
+    // MARK: Methods
+    
+    private func setupTableView() {
+        let bundle = Bundle(for: type(of: self))
+        self.slideUpController?.tableView.register(UINib(nibName: SlideUpDefaultTableViewCell.identifier, bundle: bundle), forCellReuseIdentifier: SlideUpDefaultTableViewCell.identifier)
+        self.slideUpController?.tableView.dataSource = self
+        self.slideUpController?.tableView.delegate = self
     }
 }
 
@@ -31,16 +42,26 @@ extension SlideUpDefaultItemHandler: UITableViewDataSource {
             return 0
         }
         
-        // TODO: slideUpController.presenter.items.count
-        return 0
+        return slideUpController.presenter?.items.count ?? 0
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SlideUpDefaultTableViewCell = tableView.dequeueReusableCell(withIdentifier: SlideUpDefaultTableViewCell.identifier) as! SlideUpDefaultTableViewCell
         
-        // TODO: configProductCell(cell, atIndexPath: indexPath)
+        if let itemData = slideUpController?.presenter?.items[indexPath.row].data {
+            cell.refresh(with: itemData)
+        }
         
         return cell
     }
     
+}
+
+// MARK: [Extension] - UITableViewDelegate
+
+extension SlideUpDefaultItemHandler: UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: Implement selection handler in presenter
+    }
 }

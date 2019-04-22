@@ -36,6 +36,8 @@ open class SlideUpControllerDefaultView: UIViewController {
     @IBOutlet weak var closeTitleLabel: UILabel!
     @IBOutlet weak var openTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerContainerView: UIView!
+    
     // MARK: - Constants
     
     private let popupOffset: CGFloat = 440
@@ -45,6 +47,7 @@ open class SlideUpControllerDefaultView: UIViewController {
     private lazy var panRecognizer: InstantPanGestureRecognizer = {
         let recognizer = InstantPanGestureRecognizer()
         recognizer.addTarget(self, action: #selector(popupViewPanned(recognizer:)))
+        recognizer.delegate = self
         return recognizer
     }()
     
@@ -196,7 +199,6 @@ open class SlideUpControllerDefaultView: UIViewController {
         runningAnimators.append(transitionAnimator)
         runningAnimators.append(inTitleAnimator)
         runningAnimators.append(outTitleAnimator)
-        
     }
     
     // MARK: Gesture handlers
@@ -253,7 +255,6 @@ open class SlideUpControllerDefaultView: UIViewController {
             
             // continue all animations
             runningAnimators.forEach { $0.continueAnimation(withTimingParameters: nil, durationFactor: 0) }
-            
         default:
             ()
         }
@@ -269,5 +270,18 @@ extension SlideUpControllerDefaultView: SlideUpControllerView {
     
     public func present(in vc: UIViewController) {
         self.presenter?.present(in: vc)
+    }
+}
+
+extension SlideUpControllerDefaultView: UIGestureRecognizerDelegate {
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return currentState == .open
+    }
+    
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        let touchLocation = gestureRecognizer.location(in: popupView)
+        return (currentState == .open && tableView.contentOffset.y == 0) || currentState == .closed || touchLocation.y < headerContainerView.frame.height
     }
 }

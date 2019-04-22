@@ -46,6 +46,18 @@ class MainDefaultView: UIViewController {
         slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
             print("Item tapped!")
         }))
+        
+        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
+            print("Item tapped!")
+        }))
+        
+        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
+            print("Item tapped!")
+        }))
+        
+        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
+            print("Item tapped!")
+        }))
     }
 }
 

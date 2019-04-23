@@ -10,10 +10,12 @@ import Foundation
 
 open class SlideUpControllerDefaultPresenter {
     
-    // MARK: Properties
+    // MARK: SlideUpControllerPresenter Properties
     
     weak public var view: SlideUpControllerView?
     public var items: [SlideUpControllerItem<Any>] = []
+    public var mainColor: UIColor?
+    public var headerTitle: String?
     
     // MARK: Methods
     
@@ -33,5 +35,15 @@ extension SlideUpControllerDefaultPresenter: SlideUpControllerPresenter {
     
     public func present(in vc: UIViewController) {
         addSlideUpControllerView(to: vc)
+    }
+    
+    public func setMainColor(_ color: UIColor) {
+        mainColor = color
+        view?.mainColorSetted()
+    }
+    
+    public func setHeaderTitle(_ title: String) {
+        headerTitle = title
+        view?.headerTitleSetted()
     }
 }

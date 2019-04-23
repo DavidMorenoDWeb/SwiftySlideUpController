@@ -22,6 +22,7 @@ class MainDefaultView: UIViewController {
         super.viewDidLoad()
         
         setupSlideUpController()
+        presenter?.reloadComments()
     }
     
     // MARK: Private methods
@@ -31,36 +32,19 @@ class MainDefaultView: UIViewController {
         
         slideUpController?.present(in: self)
         
-        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title", text: "Subtitle is larger than the title", image: nil), value: 1, handler: { item in
-            print("Item tapped!")
-        }))
-        
-        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 2", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 2, handler: { item in
-            print("Item tapped!")
-        }))
-        
-        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 3", text: "Subtitle is larger than the title and larger than the first text", image: nil), value: 3, handler: { item in
-            print("Item tapped!")
-        }))
-        
-        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
-            print("Item tapped!")
-        }))
-        
-        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
-            print("Item tapped!")
-        }))
-        
-        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
-            print("Item tapped!")
-        }))
-        
-        slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Title 4", text: "Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured Subtitle is larger than the title and larger than the first text, because I want to check if the autolayout is correctly configured", image: nil), value: 3, handler: { item in
-            print("Item tapped!")
-        }))
+        slideUpController?.setHeaderTitle("Comments")
+        slideUpController?.setMainColor(UIColor(red: 0.0/255.0, green: 150.0/255.0, blue: 255.0/255.0, alpha: 1.0))
     }
 }
 
 extension MainDefaultView: MainView {
-
+    
+    func display(_ comments: [Comment]) {
+        for (index, comment) in comments.enumerated() {
+            slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: comment.user.username, text: comment.text, image: nil), value: index, handler: { item in
+                print("Item tapped!")
+            }))
+        }
+    }
+    
 }

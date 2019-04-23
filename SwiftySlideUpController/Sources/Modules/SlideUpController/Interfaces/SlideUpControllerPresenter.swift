@@ -14,9 +14,13 @@ public protocol SlideUpControllerPresenter: class {
     
     var view: SlideUpControllerView? { get set }
     var items: [SlideUpControllerItem<Any>] { get set }
+    var mainColor: UIColor? { get set }
+    var headerTitle: String? { get set }
     
     // MARK: Methods
     
     func addItem(_ item:SlideUpControllerItem<Any>)
     func present(in vc: UIViewController)
+    func setMainColor(_ color: UIColor)
+    func setHeaderTitle(_ title: String)
 }

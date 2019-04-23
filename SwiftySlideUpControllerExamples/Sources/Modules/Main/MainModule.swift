@@ -12,7 +12,7 @@ class MainModule {
 
     func buildDefault() -> UIViewController {
         let view = MainDefaultView()
-        let interactor = MainDefaultInteractor()
+        let interactor = MainDefaultInteractor(commentsService: CommentsService())
         let presenter = MainDefaultPresenter()
         let router = MainDefaultRouter()
 

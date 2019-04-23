@@ -25,8 +25,6 @@ extension State {
 }
 
 open class SlideUpControllerDefaultView: UIViewController {
-
-    public var presenter: SlideUpControllerPresenter?
     
     // MARK: Outlets
     
@@ -62,6 +60,12 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     /// The progress of each animator. This array is parallel to the `runningAnimators` array.
     private var animationProgress = [CGFloat]()
+    
+    
+    // MARK: SlideUpControllerView properties
+    
+    /// The presenter for the view
+    public var presenter: SlideUpControllerPresenter?
     
     // MARK: Initializers
     
@@ -269,7 +273,28 @@ extension SlideUpControllerDefaultView: SlideUpControllerView {
     }
     
     public func present(in vc: UIViewController) {
-        self.presenter?.present(in: vc)
+        presenter?.present(in: vc)
+    }
+    
+    public func setMainColor(_ color: UIColor) {
+        presenter?.setMainColor(color)
+    }
+    
+    public func setHeaderTitle(_ title: String) {
+        presenter?.setHeaderTitle(title)
+    }
+    
+    public func mainColorSetted() {
+        if let color = presenter?.mainColor {
+            closeTitleLabel.textColor = color
+        }
+    }
+    
+    public func headerTitleSetted() {
+        if let title = presenter?.headerTitle {
+            openTitleLabel.text = title
+            closeTitleLabel.text = title
+        }
     }
 }
 

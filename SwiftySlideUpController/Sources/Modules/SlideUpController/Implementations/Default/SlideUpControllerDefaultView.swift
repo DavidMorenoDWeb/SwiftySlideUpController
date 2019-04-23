@@ -282,6 +282,6 @@ extension SlideUpControllerDefaultView: UIGestureRecognizerDelegate {
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         
         let touchLocation = gestureRecognizer.location(in: popupView)
-        return (currentState == .open && tableView.contentOffset.y == 0) || currentState == .closed || touchLocation.y < headerContainerView.frame.height
+        return (currentState == .open && tableView.contentOffset.y <= 0) || currentState == .closed || touchLocation.y < headerContainerView.frame.height
     }
 }

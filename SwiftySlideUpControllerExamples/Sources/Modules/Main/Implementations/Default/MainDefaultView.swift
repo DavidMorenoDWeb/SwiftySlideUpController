@@ -42,7 +42,8 @@ extension MainDefaultView: MainView {
     func display(_ comments: [Comment]) {
         for (index, comment) in comments.enumerated() {
             slideUpController?.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: comment.user.username, text: comment.text, image: nil), value: index, handler: { item in
-                print("Item tapped!")
+                
+                print("Item \(index) tapped, with name: \(String(describing: item.data.title))")
             }))
         }
     }

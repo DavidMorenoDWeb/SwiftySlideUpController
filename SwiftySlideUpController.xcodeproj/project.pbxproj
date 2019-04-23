@@ -19,7 +19,6 @@
 		AAD15D642266251B00B36F8A /* SlideUpControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D632266251B00B36F8A /* SlideUpControllerPresenter.swift */; };
 		AAD15D662266258C00B36F8A /* SlideUpControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D652266258C00B36F8A /* SlideUpControllerModule.swift */; };
 		AAD15D682266260200B36F8A /* SlideUpControllerDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D672266260200B36F8A /* SlideUpControllerDefaultPresenter.swift */; };
-		AAD15D6C2266291800B36F8A /* InstantPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */; };
 		AAD15D8122671BE000B36F8A /* MainDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7722671BE000B36F8A /* MainDefaultRouter.swift */; };
 		AAD15D8222671BE000B36F8A /* MainDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7822671BE000B36F8A /* MainDefaultView.swift */; };
 		AAD15D8322671BE000B36F8A /* MainDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D7922671BE000B36F8A /* MainDefaultInteractor.swift */; };
@@ -69,7 +68,6 @@
 		AAD15D632266251B00B36F8A /* SlideUpControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerPresenter.swift; sourceTree = "<group>"; };
 		AAD15D652266258C00B36F8A /* SlideUpControllerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerModule.swift; sourceTree = "<group>"; };
 		AAD15D672266260200B36F8A /* SlideUpControllerDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerDefaultPresenter.swift; sourceTree = "<group>"; };
-		AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		AAD15D7722671BE000B36F8A /* MainDefaultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDefaultRouter.swift; sourceTree = "<group>"; };
 		AAD15D7822671BE000B36F8A /* MainDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDefaultView.swift; sourceTree = "<group>"; };
 		AAD15D7922671BE000B36F8A /* MainDefaultInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDefaultInteractor.swift; sourceTree = "<group>"; };
@@ -224,17 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				AAD15D962267421400B36F8A /* Views */,
-				AAD15D6A226628F200B36F8A /* GestureRecognizers */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		AAD15D6A226628F200B36F8A /* GestureRecognizers */ = {
-			isa = PBXGroup;
-			children = (
-				AAD15D6B2266291800B36F8A /* InstantPanGestureRecognizer.swift */,
-			);
-			path = GestureRecognizers;
 			sourceTree = "<group>";
 		};
 		AAD15D6F22671AAE00B36F8A /* Assets */ = {
@@ -527,7 +516,6 @@
 				AAD15D62226624E300B36F8A /* SlideUpControllerView.swift in Sources */,
 				AAD15D682266260200B36F8A /* SlideUpControllerDefaultPresenter.swift in Sources */,
 				AAD15D9322673D6F00B36F8A /* SlideUpControllerItemData.swift in Sources */,
-				AAD15D6C2266291800B36F8A /* InstantPanGestureRecognizer.swift in Sources */,
 				AAD15D9022673A5200B36F8A /* SlideUpControllerTitle.swift in Sources */,
 				AAD15D9522673F3200B36F8A /* SlideUpControllerItem.swift in Sources */,
 			);

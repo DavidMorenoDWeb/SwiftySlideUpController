@@ -42,10 +42,17 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     // MARK: Properties
     
-    private lazy var panRecognizer: InstantPanGestureRecognizer = {
-        let recognizer = InstantPanGestureRecognizer()
+    /// The Pan Gesture Recognized for the slide behavior
+    private lazy var panRecognizer: UIPanGestureRecognizer = {
+        let recognizer = UIPanGestureRecognizer()
         recognizer.addTarget(self, action: #selector(popupViewPanned(recognizer:)))
         recognizer.delegate = self
+        return recognizer
+    }()
+    
+    private lazy var tapRecognizer: UITapGestureRecognizer = {
+        let recognizer = UITapGestureRecognizer()
+        recognizer.addTarget(self, action: #selector(popupViewTapped(recognizer:)))
         return recognizer
     }()
     
@@ -53,14 +60,17 @@ open class SlideUpControllerDefaultView: UIViewController {
     public var itemHandler: SlideUpDefaultItemHandler?
     
     /// The current state of the animation. This variable is changed only when an animation completes.
-    private var currentState: State = .closed
+    private var currentState: State = .closed {
+        didSet {
+            tableView.isScrollEnabled = true
+        }
+    }
     
     /// All of the currently running animators.
     private var runningAnimators = [UIViewPropertyAnimator]()
     
     /// The progress of each animator. This array is parallel to the `runningAnimators` array.
     private var animationProgress = [CGFloat]()
-    
     
     // MARK: SlideUpControllerView properties
     
@@ -86,6 +96,7 @@ open class SlideUpControllerDefaultView: UIViewController {
         configPopupView()
         configOpenTitleLabel()
         popupView.addGestureRecognizer(panRecognizer)
+        headerContainerView.addGestureRecognizer(tapRecognizer)
         itemHandler = SlideUpDefaultItemHandler(slideUpController: self)
     }
     
@@ -235,6 +246,10 @@ open class SlideUpControllerDefaultView: UIViewController {
                 animator.fractionComplete = fraction + animationProgress[index]
             }
             
+            if !runningAnimators.isEmpty {
+                self.tableView.isScrollEnabled = runningAnimators[0].fractionComplete == 0.0
+            }
+            
         case .ended:
             
             // variable setup
@@ -259,9 +274,14 @@ open class SlideUpControllerDefaultView: UIViewController {
             
             // continue all animations
             runningAnimators.forEach { $0.continueAnimation(withTimingParameters: nil, durationFactor: 0) }
+            
         default:
             ()
         }
+    }
+    
+    @objc private func popupViewTapped(recognizer: UITapGestureRecognizer) {
+        animateTransitionIfNeeded(to: currentState.opposite, duration: 0.8)
     }
 }
 
@@ -301,12 +321,13 @@ extension SlideUpControllerDefaultView: SlideUpControllerView {
 extension SlideUpControllerDefaultView: UIGestureRecognizerDelegate {
     
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return currentState == .open
+        return true
     }
     
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        
         let touchLocation = gestureRecognizer.location(in: popupView)
-        return (currentState == .open && tableView.contentOffset.y <= 0) || currentState == .closed || touchLocation.y < headerContainerView.frame.height
+        let shouldBegin = (currentState == .open && tableView.contentOffset.y == 0) || currentState == .closed || touchLocation.y < headerContainerView.frame.height
+        
+        return shouldBegin
     }
 }

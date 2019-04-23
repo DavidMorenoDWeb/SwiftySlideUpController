@@ -62,6 +62,10 @@ extension SlideUpDefaultItemHandler: UITableViewDataSource {
 extension SlideUpDefaultItemHandler: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement selection handler in presenter
+        
+        if let item = slideUpController?.presenter?.items[indexPath.row] {
+            
+            item.handler?(item)
+        }
     }
 }

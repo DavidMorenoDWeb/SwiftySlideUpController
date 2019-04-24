@@ -16,6 +16,11 @@ class MainDefaultView: UIViewController {
     var presenter: MainPresenter?
     var slideUpController: SlideUpControllerDefaultView?
     
+    /// Determines if the current orientation is portrait
+    private var portraitOrientation: Bool {
+        return UIDevice.current.orientation == .portrait || UIDevice.current.orientation == .faceUp || UIDevice.current.orientation == .faceDown || UIDevice.current.orientation == .portraitUpsideDown
+    }
+    
     // MARK: Life-Cycle
     
     override func viewDidLoad() {
@@ -25,6 +30,21 @@ class MainDefaultView: UIViewController {
         presenter?.reloadComments()
     }
     
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        coordinator.animate(alongsideTransition: { context in
+            
+        }, completion: { [weak self] context in
+            if let _self = self {
+                if _self.portraitOrientation {
+                    _self.slideUpController?.set(controllerHeight: 500)
+                } else {
+                    _self.slideUpController?.set(controllerHeight: _self.view.frame.height)
+                }
+            }
+        })
+    }
+    
     // MARK: Private methods
     
     private func setupSlideUpController() {
@@ -32,8 +52,8 @@ class MainDefaultView: UIViewController {
         
         slideUpController?.present(in: self)
         
-        slideUpController?.setHeaderTitle("Comments")
-        slideUpController?.setMainColor(UIColor(red: 0.0/255.0, green: 150.0/255.0, blue: 255.0/255.0, alpha: 1.0))
+        slideUpController?.set(headerTitle: "Comments")
+        slideUpController?.set(mainColor: UIColor(red: 0.0/255.0, green: 150.0/255.0, blue: 255.0/255.0, alpha: 1.0))
     }
 }
 

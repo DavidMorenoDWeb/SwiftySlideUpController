@@ -36,7 +36,7 @@ open class SlideUpControllerDefaultView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerContainerView: UIView!
     @IBOutlet weak var headerContainerViewHeightConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var popupHeightConstraint: NSLayoutConstraint!
     // MARK: Properties
     
     /// The Pan Gesture Recognized for the slide behavior
@@ -56,6 +56,13 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     /// The handler for the tableview items. It implements UITableViewDataSource and UITableViewDelegate
     public var itemHandler: SlideUpDefaultItemHandler?
+    
+    /// The height of the popup. Default is 500.0
+    public var popupHeight: CGFloat = 500.0 {
+        didSet {
+            popupHeightConstraint.constant = popupHeight
+        }
+    }
     
     /// The current state of the animation. This variable is changed only when an animation completes.
     private var currentState: State = .closed {
@@ -77,7 +84,7 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     /// The offset that will be applied to the popup bottom constraint
     private var popupOffset: CGFloat {
-        return 500.0 - headerViewHeight
+        return popupHeight - headerViewHeight
     }
     
     // MARK: SlideUpControllerView properties
@@ -110,7 +117,8 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setConstraints()
+        
+        setHeaderAndOffsetConstraints()
     }
     
     // MARK: Methods
@@ -118,8 +126,6 @@ open class SlideUpControllerDefaultView: UIViewController {
     private func configPopupView() {
         if #available(iOS 11.0, *) {
             popupView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        } else {
-            // Fallback on earlier versions
         }
         popupView.layer.shadowColor = UIColor.black.cgColor
         popupView.layer.shadowOpacity = 0.1
@@ -135,7 +141,7 @@ open class SlideUpControllerDefaultView: UIViewController {
         openTitleLabel.transform = CGAffineTransform(scaleX: 0.65, y: 0.65).concatenating(CGAffineTransform(translationX: 0, y: -15))
     }
     
-    private func setConstraints() {
+    private func setHeaderAndOffsetConstraints() {
         headerContainerViewHeightConstraint.constant = headerViewHeight
         bottomConstraint.constant = popupOffset
     }
@@ -202,10 +208,9 @@ open class SlideUpControllerDefaultView: UIViewController {
                             self.closeTitleLabel.alpha = 1
                         }
         })
+        
         if #available(iOS 11.0, *) {
             inTitleAnimator.scrubsLinearly = false
-        } else {
-            // Fallback on earlier versions
         }
         
         // an animator for the title that is transitioning out of view
@@ -217,10 +222,9 @@ open class SlideUpControllerDefaultView: UIViewController {
                             self.openTitleLabel.alpha = 0
                         }
         })
+        
         if #available(iOS 11.0, *) {
             outTitleAnimator.scrubsLinearly = false
-        } else {
-            // Fallback on earlier versions
         }
         
         // start all animators
@@ -314,12 +318,17 @@ extension SlideUpControllerDefaultView: SlideUpControllerView {
         presenter?.present(in: vc)
     }
     
-    public func setMainColor(_ color: UIColor) {
-        presenter?.setMainColor(color)
+    public func set(mainColor color: UIColor) {
+        presenter?.set(mainColor: color)
     }
     
-    public func setHeaderTitle(_ title: String) {
-        presenter?.setHeaderTitle(title)
+    public func set(headerTitle title: String) {
+        presenter?.set(headerTitle: title)
+    }
+    
+    public func set(controllerHeight height: CGFloat) {
+        popupHeight = height
+        setHeaderAndOffsetConstraints()
     }
     
     public func mainColorSetted() {

@@ -17,6 +17,7 @@
                 <outlet property="headerContainerViewHeightConstraint" destination="FJf-BX-1c5" id="N0u-87-Q6I"/>
                 <outlet property="openTitleLabel" destination="zU4-c1-3SJ" id="HRf-Kh-w8v"/>
                 <outlet property="overlayView" destination="56N-sY-DZB" id="4vE-48-FmU"/>
+                <outlet property="popupHeightConstraint" destination="hkm-tn-JgC" id="umd-sm-Jw6"/>
                 <outlet property="popupView" destination="DYf-ZJ-u6k" id="HNe-fy-Vzz"/>
                 <outlet property="tableView" destination="yZC-Vv-1bC" id="T9E-9J-P14"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

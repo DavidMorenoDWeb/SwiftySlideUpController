@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.555467"
+            timestampString = "577798347.905658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "SlideUpControllerDefaultView"
-            landmarkType = "3">
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.557224"
+            timestampString = "577798347.905866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
-            landmarkName = "SlideUpControllerDefaultView"
-            landmarkType = "21">
+            startingLineNumber = "315"
+            endingLineNumber = "315"
+            landmarkName = "addItem(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.558097"
+            timestampString = "577798347.905947"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "SlideUpControllerDefaultView"
-            landmarkType = "3">
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "animateTransitionIfNeeded(to:duration:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.559054"
+            timestampString = "577798347.906027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
             landmarkName = "popupViewPanned(recognizer:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,13 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.559976"
+            timestampString = "577798347.906094"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "SlideUpControllerDefaultView"
-            landmarkType = "3">
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "popupViewPanned(recognizer:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -122,13 +122,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.561581"
+            timestampString = "577798347.906167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
-            landmarkName = "SlideUpControllerDefaultView"
-            landmarkType = "21">
+            startingLineNumber = "352"
+            endingLineNumber = "352"
+            landmarkName = "gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/App/Views/TableViewHandlers/SlideUpDefaultItemHandler.swift"
-            timestampString = "577791232.563051"
+            timestampString = "577795800.312086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.5641429"
+            timestampString = "577798347.906258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "292"
-            endingLineNumber = "292"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "popupViewPanned(recognizer:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.565111"
+            timestampString = "577798347.906321"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "animateTransitionIfNeeded(to:duration:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.565722"
+            timestampString = "577798347.906383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "animateTransitionIfNeeded(to:duration:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,12 +202,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
-            timestampString = "577791232.566272"
+            timestampString = "577798347.906444"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
-            landmarkName = "gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)"
+            startingLineNumber = "356"
+            endingLineNumber = "356"
+            landmarkName = "gestureRecognizerShouldBegin(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -218,12 +218,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultPresenter.swift"
-            timestampString = "577791232.5670151"
+            timestampString = "577795800.314796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "addSlideUpControllerView(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
+            timestampString = "577798347.906526"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "setHeaderAndOffsetConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultView.swift"
+            timestampString = "577798347.90661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

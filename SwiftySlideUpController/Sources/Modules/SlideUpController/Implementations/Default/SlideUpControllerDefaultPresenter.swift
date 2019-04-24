@@ -37,12 +37,12 @@ extension SlideUpControllerDefaultPresenter: SlideUpControllerPresenter {
         addSlideUpControllerView(to: vc)
     }
     
-    public func setMainColor(_ color: UIColor) {
+    public func set(mainColor color: UIColor) {
         mainColor = color
         view?.mainColorSetted()
     }
     
-    public func setHeaderTitle(_ title: String) {
+    public func set(headerTitle title: String) {
         headerTitle = title
         view?.headerTitleSetted()
     }

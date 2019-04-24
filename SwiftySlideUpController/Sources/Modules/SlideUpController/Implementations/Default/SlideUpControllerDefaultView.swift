@@ -123,6 +123,7 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     // MARK: Methods
     
+    /// Sets the masked corners to the popup and configures its shadow
     private func configPopupView() {
         if #available(iOS 11.0, *) {
             popupView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -141,6 +142,7 @@ open class SlideUpControllerDefaultView: UIViewController {
         openTitleLabel.transform = CGAffineTransform(scaleX: 0.65, y: 0.65).concatenating(CGAffineTransform(translationX: 0, y: -15))
     }
     
+    /// Sets the header container height and the bottom constraint of the popup
     private func setHeaderAndOffsetConstraints() {
         headerContainerViewHeightConstraint.constant = headerViewHeight
         bottomConstraint.constant = popupOffset

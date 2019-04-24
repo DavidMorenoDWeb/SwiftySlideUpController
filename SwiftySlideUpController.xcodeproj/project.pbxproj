@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA311469227097E300B7EDE8 /* SlideUpControllerModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA311468227097E300B7EDE8 /* SlideUpControllerModuleTests.swift */; };
+		AA31146C22709EE300B7EDE8 /* SlideUpControllerDefaultPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31146B22709EE300B7EDE8 /* SlideUpControllerDefaultPresenterTests.swift */; };
 		AAD15D2E22661C1D00B36F8A /* SwiftySlideUpController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD15D2422661C1D00B36F8A /* SwiftySlideUpController.framework */; };
-		AAD15D3322661C1D00B36F8A /* SwiftySlideUpControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D3222661C1D00B36F8A /* SwiftySlideUpControllerTests.swift */; };
 		AAD15D3522661C1D00B36F8A /* SwiftySlideUpController.h in Headers */ = {isa = PBXBuildFile; fileRef = AAD15D2722661C1D00B36F8A /* SwiftySlideUpController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAD15D4522661C9A00B36F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD15D4422661C9A00B36F8A /* AppDelegate.swift */; };
 		AAD15D4C22661C9B00B36F8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD15D4B22661C9B00B36F8A /* Assets.xcassets */; };
@@ -52,11 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA311468227097E300B7EDE8 /* SlideUpControllerModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerModuleTests.swift; sourceTree = "<group>"; };
+		AA31146B22709EE300B7EDE8 /* SlideUpControllerDefaultPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpControllerDefaultPresenterTests.swift; sourceTree = "<group>"; };
 		AAD15D2422661C1D00B36F8A /* SwiftySlideUpController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftySlideUpController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD15D2722661C1D00B36F8A /* SwiftySlideUpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftySlideUpController.h; sourceTree = "<group>"; };
 		AAD15D2822661C1D00B36F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD15D2D22661C1D00B36F8A /* SwiftySlideUpControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftySlideUpControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAD15D3222661C1D00B36F8A /* SwiftySlideUpControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftySlideUpControllerTests.swift; sourceTree = "<group>"; };
 		AAD15D3422661C1D00B36F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD15D4222661C9900B36F8A /* SwiftySlideUpControllerExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySlideUpControllerExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD15D4422661C9A00B36F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA3114662270978E00B7EDE8 /* SlideUpControllerModule */ = {
+			isa = PBXGroup;
+			children = (
+				AA31146A22709E6200B7EDE8 /* Default */,
+				AA311468227097E300B7EDE8 /* SlideUpControllerModuleTests.swift */,
+			);
+			path = SlideUpControllerModule;
+			sourceTree = "<group>";
+		};
+		AA31146A22709E6200B7EDE8 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				AA31146B22709EE300B7EDE8 /* SlideUpControllerDefaultPresenterTests.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
 		AAD15D1A22661C1D00B36F8A = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +169,7 @@
 		AAD15D3122661C1D00B36F8A /* SwiftySlideUpControllerTests */ = {
 			isa = PBXGroup;
 			children = (
-				AAD15D3222661C1D00B36F8A /* SwiftySlideUpControllerTests.swift */,
+				AA3114662270978E00B7EDE8 /* SlideUpControllerModule */,
 				AAD15D3422661C1D00B36F8A /* Info.plist */,
 			);
 			path = SwiftySlideUpControllerTests;
@@ -459,6 +478,7 @@
 					};
 					AAD15D2C22661C1D00B36F8A = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					AAD15D4122661C9900B36F8A = {
 						CreatedOnToolsVersion = 10.2;
@@ -537,7 +557,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD15D3322661C1D00B36F8A /* SwiftySlideUpControllerTests.swift in Sources */,
+				AA311469227097E300B7EDE8 /* SlideUpControllerModuleTests.swift in Sources */,
+				AA31146C22709EE300B7EDE8 /* SlideUpControllerDefaultPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +783,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftySlideUpControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -771,6 +793,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidmorenolora.SwiftySlideUpControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -780,6 +805,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftySlideUpControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -789,6 +815,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidmorenolora.SwiftySlideUpControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

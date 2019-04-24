@@ -138,13 +138,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/App/Views/TableViewHandlers/SlideUpDefaultItemHandler.swift"
-            timestampString = "577795800.312086"
+            timestampString = "577807927.330919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
+            landmarkName = "SlideUpDefaultItemHandler"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftySlideUpController/Sources/Modules/SlideUpController/Implementations/Default/SlideUpControllerDefaultPresenter.swift"
-            timestampString = "577795800.314796"
+            timestampString = "577807927.331123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "addSlideUpControllerView(to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -256,6 +256,22 @@
             startingLineNumber = "121"
             endingLineNumber = "121"
             landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftySlideUpControllerTests/SlideUpControllerModule/SlideUpControllerModuleTests.swift"
+            timestampString = "577807927.331319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "tearDown()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

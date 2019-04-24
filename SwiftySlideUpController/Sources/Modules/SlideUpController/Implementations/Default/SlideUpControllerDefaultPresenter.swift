@@ -19,6 +19,7 @@ open class SlideUpControllerDefaultPresenter {
     
     // MARK: Methods
     
+    /// Adds the SlideUpControllerView to the view of an UIViewController
     func addSlideUpControllerView(to vc: UIViewController) {
         if let slideUpView = view?.view {
             slideUpView.frame = vc.view?.bounds ?? .zero

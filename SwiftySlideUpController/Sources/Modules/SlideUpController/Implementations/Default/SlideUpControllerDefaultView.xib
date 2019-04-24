@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +14,7 @@
                 <outlet property="bottomConstraint" destination="9LN-cG-5aF" id="blB-n3-ud1"/>
                 <outlet property="closeTitleLabel" destination="G6d-Qf-chb" id="jRx-LM-CFw"/>
                 <outlet property="headerContainerView" destination="UKa-v5-MTv" id="jJa-GL-W81"/>
+                <outlet property="headerContainerViewHeightConstraint" destination="FJf-BX-1c5" id="N0u-87-Q6I"/>
                 <outlet property="openTitleLabel" destination="zU4-c1-3SJ" id="HRf-Kh-w8v"/>
                 <outlet property="overlayView" destination="56N-sY-DZB" id="4vE-48-FmU"/>
                 <outlet property="popupView" destination="DYf-ZJ-u6k" id="HNe-fy-Vzz"/>
@@ -28,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56N-sY-DZB" userLabel="overlayView">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYf-ZJ-u6k" userLabel="popupView">
@@ -82,15 +82,14 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="DYf-ZJ-u6k" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="440" id="9LN-cG-5aF"/>
-                <constraint firstItem="56N-sY-DZB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ng5-87-WMr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="56N-sY-DZB" secondAttribute="trailing" id="c3G-Fq-hJU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="56N-sY-DZB" secondAttribute="bottom" id="lNP-n1-Zgh"/>
-                <constraint firstItem="56N-sY-DZB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="p6N-HX-6yZ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DYf-ZJ-u6k" secondAttribute="trailing" id="zGE-vd-rWW"/>
-                <constraint firstItem="DYf-ZJ-u6k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zl4-XT-HQb"/>
+                <constraint firstItem="DYf-ZJ-u6k" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="440" id="9LN-cG-5aF"/>
+                <constraint firstItem="56N-sY-DZB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ng5-87-WMr"/>
+                <constraint firstAttribute="trailing" secondItem="56N-sY-DZB" secondAttribute="trailing" id="c3G-Fq-hJU"/>
+                <constraint firstAttribute="bottom" secondItem="56N-sY-DZB" secondAttribute="bottom" id="lNP-n1-Zgh"/>
+                <constraint firstItem="56N-sY-DZB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p6N-HX-6yZ"/>
+                <constraint firstAttribute="trailing" secondItem="DYf-ZJ-u6k" secondAttribute="trailing" id="zGE-vd-rWW"/>
+                <constraint firstItem="DYf-ZJ-u6k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zl4-XT-HQb"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
 </document>

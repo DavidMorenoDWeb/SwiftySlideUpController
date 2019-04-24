@@ -35,10 +35,7 @@ open class SlideUpControllerDefaultView: UIViewController {
     @IBOutlet weak var openTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerContainerView: UIView!
-    
-    // MARK: - Constants
-    
-    private let popupOffset: CGFloat = 440
+    @IBOutlet weak var headerContainerViewHeightConstraint: NSLayoutConstraint!
     
     // MARK: Properties
     
@@ -50,6 +47,7 @@ open class SlideUpControllerDefaultView: UIViewController {
         return recognizer
     }()
     
+    /// The Tap Gesture Recognized for the header tap behavior
     private lazy var tapRecognizer: UITapGestureRecognizer = {
         let recognizer = UITapGestureRecognizer()
         recognizer.addTarget(self, action: #selector(popupViewTapped(recognizer:)))
@@ -71,6 +69,16 @@ open class SlideUpControllerDefaultView: UIViewController {
     
     /// The progress of each animator. This array is parallel to the `runningAnimators` array.
     private var animationProgress = [CGFloat]()
+    
+    /// The height of the header view container
+    private var headerViewHeight: CGFloat {
+        return !UIDevice.hasNotch ? 60.0 : 80.0
+    }
+    
+    /// The offset that will be applied to the popup bottom constraint
+    private var popupOffset: CGFloat {
+        return 500.0 - headerViewHeight
+    }
     
     // MARK: SlideUpControllerView properties
     
@@ -100,6 +108,11 @@ open class SlideUpControllerDefaultView: UIViewController {
         itemHandler = SlideUpDefaultItemHandler(slideUpController: self)
     }
     
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setConstraints()
+    }
+    
     // MARK: Methods
     
     private func configPopupView() {
@@ -120,6 +133,11 @@ open class SlideUpControllerDefaultView: UIViewController {
     private func configOpenTitleLabel() {
         openTitleLabel.alpha = 0
         openTitleLabel.transform = CGAffineTransform(scaleX: 0.65, y: 0.65).concatenating(CGAffineTransform(translationX: 0, y: -15))
+    }
+    
+    private func setConstraints() {
+        headerContainerViewHeightConstraint.constant = headerViewHeight
+        bottomConstraint.constant = popupOffset
     }
     
     /// Animates the transition, if the animation is not already running.

@@ -24,3 +24,35 @@ To install SwiftySlideUpController with [CocoaPods](https://cocoapods.org), add 
 ```ruby
 pod 'SwiftySlideUpController'
 ```
+
+### <a name="manual-installation"></a>Manual installation
+
+To add `SwiftySlideUpController` to your app manually, clone this repo
+and place it somewhere on disk, then add `SwiftySlideUpController.xcodeproj` to the project
+and add `SwiftySlideUpController.framework` as an embedded app binary and target dependency.
+
+## <a name="basic-example"></a>Basic example
+
+You can add a SlideUpController to your UIViewController and add your items to it easily.
+
+```swift
+// Creates the SlideUpController
+var slideUpController: SlideUpControllerDefault = SlideUpControllerModule().buildDefault()
+        
+// Presents it in your current UIViewController        
+slideUpController.present(in: self)
+
+// Sets the header title
+slideUpController.set(headerTitle: "Comments")
+
+// Adds a couple of items
+slideUpController.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Your cool title", text: "The description text", image: nil), value: index, handler: { item in
+                // Item click handler
+                print("Item tapped with name: \(String(describing: item.data.title))")
+            }))
+            
+slideUpController.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(title: "Your second item title", text: "The description text", image: nil), value: index, handler: { item in
+                // Item click handler
+                print("Item tapped with name: \(String(describing: item.data.title))")
+            }))
+```

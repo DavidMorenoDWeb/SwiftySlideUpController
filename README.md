@@ -19,7 +19,7 @@ SwiftySlideUpController is a Swift lightweight library to add a slide up control
 
 ### <a name="cocoapods"></a>CocoaPods
 
-To install SwiftySlideUpController with [CocoaPods][CocoaPods], add this to your `Podfile`:
+To install SwiftySlideUpController with [CocoaPods](https://cocoapods.org), add this to your `Podfile`:
 
 ```ruby
 pod 'SwiftySlideUpController'

@@ -1,9 +1,6 @@
 # SwiftySlideUpController
 
 <p align="center">
-    <a href="https://github.com/DavidMorenoDWeb/SwiftySlideUpController">
-        <img src="https://badge.fury.io/gh/DavidMorenoDWeb%2FSwiftySlideUpController.svg?style=flat" alt="Version" />
-    </a>
     <a href="https://cocoapods.org/pods/SwiftySlideUpController">
         <img src="https://img.shields.io/cocoapods/v/SwiftySlideUpController.svg?style=flat" alt="CocoaPods" />
     </a>

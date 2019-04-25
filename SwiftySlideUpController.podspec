@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SwiftySlideUpController"
-  s.version      = "0.0.1"
+  s.version      = "1.0"
   s.summary      = "Slide up controller with interactive animations easy to use"
 
   # This description is used to generate tags and improve search results.

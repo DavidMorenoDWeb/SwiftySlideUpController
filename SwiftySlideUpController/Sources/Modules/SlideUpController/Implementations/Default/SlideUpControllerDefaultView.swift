@@ -25,8 +25,6 @@ extension State {
 }
 
 open class SlideUpControllerDefaultView: UIViewController {
-
-    public var presenter: SlideUpControllerPresenter?
     
     // MARK: Outlets
     
@@ -37,31 +35,62 @@ open class SlideUpControllerDefaultView: UIViewController {
     @IBOutlet weak var openTitleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerContainerView: UIView!
-    
-    // MARK: - Constants
-    
-    private let popupOffset: CGFloat = 440
-    
+    @IBOutlet weak var headerContainerViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var popupHeightConstraint: NSLayoutConstraint!
     // MARK: Properties
     
-    private lazy var panRecognizer: InstantPanGestureRecognizer = {
-        let recognizer = InstantPanGestureRecognizer()
+    /// The Pan Gesture Recognized for the slide behavior
+    private lazy var panRecognizer: UIPanGestureRecognizer = {
+        let recognizer = UIPanGestureRecognizer()
         recognizer.addTarget(self, action: #selector(popupViewPanned(recognizer:)))
         recognizer.delegate = self
+        return recognizer
+    }()
+    
+    /// The Tap Gesture Recognized for the header tap behavior
+    private lazy var tapRecognizer: UITapGestureRecognizer = {
+        let recognizer = UITapGestureRecognizer()
+        recognizer.addTarget(self, action: #selector(popupViewTapped(recognizer:)))
         return recognizer
     }()
     
     /// The handler for the tableview items. It implements UITableViewDataSource and UITableViewDelegate
     public var itemHandler: SlideUpDefaultItemHandler?
     
+    /// The height of the popup. Default is 500.0
+    public var popupHeight: CGFloat = 500.0 {
+        didSet {
+            popupHeightConstraint.constant = popupHeight
+        }
+    }
+    
     /// The current state of the animation. This variable is changed only when an animation completes.
-    private var currentState: State = .closed
+    private var currentState: State = .closed {
+        didSet {
+            tableView.isScrollEnabled = true
+        }
+    }
     
     /// All of the currently running animators.
     private var runningAnimators = [UIViewPropertyAnimator]()
     
     /// The progress of each animator. This array is parallel to the `runningAnimators` array.
     private var animationProgress = [CGFloat]()
+    
+    /// The height of the header view container
+    private var headerViewHeight: CGFloat {
+        return !UIDevice.hasNotch ? 60.0 : 80.0
+    }
+    
+    /// The offset that will be applied to the popup bottom constraint
+    private var popupOffset: CGFloat {
+        return popupHeight - headerViewHeight
+    }
+    
+    // MARK: SlideUpControllerView properties
+    
+    /// The presenter for the view
+    public var presenter: SlideUpControllerPresenter?
     
     // MARK: Initializers
     
@@ -82,16 +111,22 @@ open class SlideUpControllerDefaultView: UIViewController {
         configPopupView()
         configOpenTitleLabel()
         popupView.addGestureRecognizer(panRecognizer)
+        headerContainerView.addGestureRecognizer(tapRecognizer)
         itemHandler = SlideUpDefaultItemHandler(slideUpController: self)
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setHeaderAndOffsetConstraints()
     }
     
     // MARK: Methods
     
+    /// Sets the masked corners to the popup and configures its shadow
     private func configPopupView() {
         if #available(iOS 11.0, *) {
             popupView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        } else {
-            // Fallback on earlier versions
         }
         popupView.layer.shadowColor = UIColor.black.cgColor
         popupView.layer.shadowOpacity = 0.1
@@ -105,6 +140,12 @@ open class SlideUpControllerDefaultView: UIViewController {
     private func configOpenTitleLabel() {
         openTitleLabel.alpha = 0
         openTitleLabel.transform = CGAffineTransform(scaleX: 0.65, y: 0.65).concatenating(CGAffineTransform(translationX: 0, y: -15))
+    }
+    
+    /// Sets the header container height and the bottom constraint of the popup
+    private func setHeaderAndOffsetConstraints() {
+        headerContainerViewHeightConstraint.constant = headerViewHeight
+        bottomConstraint.constant = popupOffset
     }
     
     /// Animates the transition, if the animation is not already running.
@@ -169,10 +210,9 @@ open class SlideUpControllerDefaultView: UIViewController {
                             self.closeTitleLabel.alpha = 1
                         }
         })
+        
         if #available(iOS 11.0, *) {
             inTitleAnimator.scrubsLinearly = false
-        } else {
-            // Fallback on earlier versions
         }
         
         // an animator for the title that is transitioning out of view
@@ -184,10 +224,9 @@ open class SlideUpControllerDefaultView: UIViewController {
                             self.openTitleLabel.alpha = 0
                         }
         })
+        
         if #available(iOS 11.0, *) {
             outTitleAnimator.scrubsLinearly = false
-        } else {
-            // Fallback on earlier versions
         }
         
         // start all animators
@@ -231,6 +270,10 @@ open class SlideUpControllerDefaultView: UIViewController {
                 animator.fractionComplete = fraction + animationProgress[index]
             }
             
+            if !runningAnimators.isEmpty {
+                self.tableView.isScrollEnabled = runningAnimators[0].fractionComplete == 0.0
+            }
+            
         case .ended:
             
             // variable setup
@@ -255,9 +298,14 @@ open class SlideUpControllerDefaultView: UIViewController {
             
             // continue all animations
             runningAnimators.forEach { $0.continueAnimation(withTimingParameters: nil, durationFactor: 0) }
+            
         default:
             ()
         }
+    }
+    
+    @objc private func popupViewTapped(recognizer: UITapGestureRecognizer) {
+        animateTransitionIfNeeded(to: currentState.opposite, duration: 0.8)
     }
 }
 
@@ -269,19 +317,46 @@ extension SlideUpControllerDefaultView: SlideUpControllerView {
     }
     
     public func present(in vc: UIViewController) {
-        self.presenter?.present(in: vc)
+        presenter?.present(in: vc)
+    }
+    
+    public func set(mainColor color: UIColor) {
+        presenter?.set(mainColor: color)
+    }
+    
+    public func set(headerTitle title: String) {
+        presenter?.set(headerTitle: title)
+    }
+    
+    public func set(controllerHeight height: CGFloat) {
+        popupHeight = height
+        setHeaderAndOffsetConstraints()
+    }
+    
+    public func mainColorSetted() {
+        if let color = presenter?.mainColor {
+            closeTitleLabel.textColor = color
+        }
+    }
+    
+    public func headerTitleSetted() {
+        if let title = presenter?.headerTitle {
+            openTitleLabel.text = title
+            closeTitleLabel.text = title
+        }
     }
 }
 
 extension SlideUpControllerDefaultView: UIGestureRecognizerDelegate {
     
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return currentState == .open
+        return true
     }
     
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        
         let touchLocation = gestureRecognizer.location(in: popupView)
-        return (currentState == .open && tableView.contentOffset.y <= 0) || currentState == .closed || touchLocation.y < headerContainerView.frame.height
+        let shouldBegin = (currentState == .open && tableView.contentOffset.y == 0) || currentState == .closed || touchLocation.y < headerContainerView.frame.height
+        
+        return shouldBegin
     }
 }

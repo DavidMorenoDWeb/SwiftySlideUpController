@@ -11,4 +11,5 @@ protocol MainInteractor {
     
     var presenter: MainPresenter? { get set }
     
+    func comments() -> [Comment]
 }

@@ -12,6 +12,7 @@ open class SlideUpDefaultItemHandler: NSObject {
     
     // MARK: Properties
     
+    /// The SlideUpControllerView where the tableview is
     private weak var slideUpController: SlideUpControllerDefaultView?
     
     // MARK: Initializers
@@ -24,6 +25,7 @@ open class SlideUpDefaultItemHandler: NSObject {
     
     // MARK: Methods
     
+    /// Registers the cell and sets the datasource and the delegate
     private func setupTableView() {
         let bundle = Bundle(for: type(of: self))
         self.slideUpController?.tableView.register(UINib(nibName: SlideUpDefaultTableViewCell.identifier, bundle: bundle), forCellReuseIdentifier: SlideUpDefaultTableViewCell.identifier)
@@ -62,6 +64,10 @@ extension SlideUpDefaultItemHandler: UITableViewDataSource {
 extension SlideUpDefaultItemHandler: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement selection handler in presenter
+        
+        if let item = slideUpController?.presenter?.items[indexPath.row] {
+            
+            item.handler?(item)
+        }
     }
 }

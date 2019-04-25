@@ -15,5 +15,10 @@ class MainDefaultPresenter {
 }
 
 extension MainDefaultPresenter: MainPresenter {
-
+    
+    func reloadComments() {
+        if let comments = interactor?.comments() {
+            view?.display(comments)
+        }
+    }
 }

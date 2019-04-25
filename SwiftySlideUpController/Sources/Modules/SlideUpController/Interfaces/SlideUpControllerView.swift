@@ -19,5 +19,9 @@ public protocol SlideUpControllerView: UIViewController {
     
     func addItem(_ item:SlideUpControllerItem<Any>)
     func present(in vc: UIViewController)
-    
+    func set(mainColor color: UIColor)
+    func set(headerTitle title: String)
+    func set(controllerHeight height: CGFloat)
+    func mainColorSetted()
+    func headerTitleSetted()
 }

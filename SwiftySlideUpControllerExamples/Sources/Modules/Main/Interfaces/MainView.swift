@@ -11,5 +11,6 @@ import UIKit
 protocol MainView: class {
     
     var presenter: MainPresenter? { get set }
-
+    
+    func display(_ comments: [Comment])
 }

@@ -13,4 +13,6 @@ protocol MainPresenter: class {
     var interactor: MainInteractor? { get set }
     var view: MainView? { get set }
     
+    func reloadComments()
+    
 }

@@ -56,3 +56,31 @@ slideUpController.addItem(SlideUpControllerItem(data: SlideUpControllerItemData(
                 print("Item tapped with name: \(String(describing: item.data.title))")
             }))
 ```
+
+You can pass an UIImage to each item initializer as well in order to show the image in the cell.
+
+You can change the header title color too:
+
+```swift
+slideUpController.set(mainColor: UIColor.blue)
+```
+
+Or the controller height, which can be useful to work with different orientations:
+
+```swift
+slideUpController.set(controllerHeight: 500)
+```
+
+## <a name="example-project"></a>Example project
+
+The example project shows how to create a SlideUpController using custom objects and handling different orientations.
+
+<p align="center">
+    <img src ="Resources/SlideUpControllerDemoLandscape.gif" />
+</p>
+
+## License
+
+SwiftySlideUpController is available under the MIT license. See LICENSE file for more info.
+
+
